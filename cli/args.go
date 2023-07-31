@@ -105,11 +105,11 @@ func parseTerragruntOptionsFromArgs(terragruntVersion string, args []string, wri
 
 	sourceUpdate := parseBooleanArg(args, optTerragruntSourceUpdate, os.Getenv("TERRAGRUNT_SOURCE_UPDATE") == "true" || os.Getenv("TERRAGRUNT_SOURCE_UPDATE") == "1")
 
-	ignoreDependencyErrors := parseBooleanArg(args, optTerragruntIgnoreDependencyErrors, false)
+	ignoreDependencyErrors := parseBooleanArg(args, optTerragruntIgnoreDependencyErrors, os.Getenv("TERRAGRUNT_IGNORE_DEPENDENCY_ERRORS") == "true")
 
-	ignoreDependencyOrder := parseBooleanArg(args, optTerragruntIgnoreDependencyOrder, false)
+	ignoreDependencyOrder := parseBooleanArg(args, optTerragruntIgnoreDependencyOrder, os.Getenv("TERRAGRUNT_IGNORE_DEPENDENCY_ORDER") == "true")
 
-	ignoreExternalDependencies := parseBooleanArg(args, optTerragruntIgnoreExternalDependencies, false)
+	ignoreExternalDependencies := parseBooleanArg(args, optTerragruntIgnoreExternalDependencies, os.Getenv("TERRAGRUNT_IGNORE_EXTERNAL_DEPENDENCIES") == "true")
 
 	includeExternalDependencies := parseBooleanArg(args, optTerragruntIncludeExternalDependencies, os.Getenv("TERRAGRUNT_INCLUDE_EXTERNAL_DEPENDENCIES") == "true")
 

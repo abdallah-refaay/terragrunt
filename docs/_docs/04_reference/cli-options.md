@@ -698,6 +698,7 @@ When passed in, delete the contents of the temporary folder before downloading T
 ### terragrunt-ignore-dependency-errors
 
 **CLI Arg**: `--terragrunt-ignore-dependency-errors`
+**Environment Variable**:`TERRAGRUNT_IGNORE_DEPENDENCY_ERRORS` (set to `false`)
 
 When passed in, the `*-all` commands continue processing components even if a dependency fails
 
@@ -773,6 +774,7 @@ When passed in, and running `terragrunt validate-inputs`, enables strict mode fo
 ### terragrunt-ignore-dependency-order
 
 **CLI Arg**: `--terragrunt-ignore-dependency-order`
+**Environment Variable**:`TERRAGRUNT_IGNORE_DEPENDENCY_ORDER` (set to `false`)
 
 When passed in, ignore the depedencies between modules when running `*-all` commands.
 
@@ -780,6 +782,7 @@ When passed in, ignore the depedencies between modules when running `*-all` comm
 ### terragrunt-ignore-external-dependencies
 
 **CLI Arg**: `--terragrunt-ignore-external-dependencies`
+**Environment Variable**:`TERRAGRUNT_IGNORE_EXTERNAL_DEPENDENCIES` (set to `false`)
 
 When passed in, don't attempt to include any external dependencies when running `*-all` commands. Note that an external
 dependency is a dependency that is outside the current terragrunt working directory, and is not respective to the
